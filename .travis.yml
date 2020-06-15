@@ -9,7 +9,7 @@ before_deploy:
   - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
 deploy:
     provider:script 
-    script:
+script:
       docker push mapefi/mysql-rest-with-spring-boot-udemy;
       docker push mapefi/rest-with-spring-boot-udemy;
 on:
